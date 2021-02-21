@@ -1,0 +1,32 @@
+Assignment 5
+Rustem Alimzhan SE-2017
+OOP Java
+1)Main:
+package com.company;
+import java.sql.*;
+
+public class Main {
+    public static void main ( String[] args ){
+        Main obj_Connect = new Main();
+        String connectionUrl = "jdbc:postgresql://localhost:5432/Forjava";
+        Connection = null;
+        ResultSet = null;
+        Statement = null;
+        try {
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(connectionUrl, "postgres", "03072003");
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("select * from people");
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt("id_peop") + " " + resultSet.getString("name_peop") + " " + resultSet.getString("surname"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        Insert ins = new Insert();
+        ins.myMethod(2, "Danik","Kemal",72);
+    }
+}
+2)Student
+3)Group
+4)Lessons
